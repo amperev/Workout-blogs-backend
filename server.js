@@ -3,8 +3,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
 const userRoutes = require("./routes/user")
+const cors= require('cors')
+const corsOptions = require('./config/corsOptions')
 
 const app = express();
+
+app.use(cors(corsOptions))
 
 app.use(express.json());
 
