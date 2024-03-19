@@ -9,7 +9,7 @@ const corsOptions = require('./config/corsOptions')
 const app = express();
 
 app.use(cors({
-  origin: 'https://personal-workout-tracker.onrender.com',  // Hardcode your frontend URL
+  origin: '*',  // Hardcode your frontend URL
   credentials: true
 }));
 
